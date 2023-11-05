@@ -33,6 +33,11 @@ function App() {
     })
   }
 
+  const Exportar = () => {
+    Axios.get("http://localhost:3001/export").then(() => {
+      alert("base de datos exportada con éxito");
+    })
+  }
   return (
     <div className="App">
       <div className="datos">
@@ -96,7 +101,7 @@ function App() {
           }}
         ></input></label>
         <button onClick={add}>Registrar</button>
-        <button>Exportar base de datos</button>
+        <button onClick={Exportar}>Exportar base de datos</button>
 
       </div>
     </div>
